@@ -1,0 +1,76 @@
+/* slayer.css */
+
+body {
+    font-family: "Stick", sans-serif; /* Японский шрифт */
+    background-color: #1b1b1b; /* Тёмный фон */
+    color: #f5f5f5; /* Светлый текст для контраста */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('https://i.pinimg.com/736x/ba/ce/c3/bacec31cd1daec6705a6fce3252c4855.jpg'); /* Темно-синий цвет */
+    background-position: bottom;
+    background-repeat: repeat;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-family: "Stick", sans-serif; /* Элегантный, шрифтовой заголовок */
+    font-size: 2.5em;
+    margin: 0;
+    color: #f0dde7; /* Красный цвет заголовка */
+    text-shadow: 2px 2px 5px #1b1b1b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    margin: 0 1em;
+}
+
+.left-column h2 {
+    font-family: "Stick", sans-serif;
+    color: #e63946; /* Красный цвет заголовка */
+    border-bottom: 2px solid #e63946;
+    padding-bottom: 0.5em;
+}
+
+.left-column p {
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+.character-image {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 2px solid #e63946;
+    border-radius: 10px;
+}
+
+/* Добавление традиционных японских узоров как фона для правой колонки */
+.right-column {
+    background: repeating-linear-gradient(
+        45deg,
+        #1c3d51,
+        #1c3d51 10px,
+        #1b1b1b 10px,
+        #1b1b1b 20px
+    );
+    padding: 1em;
+    border-radius: 10px;
+}
+
