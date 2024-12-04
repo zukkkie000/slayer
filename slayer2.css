@@ -1,0 +1,139 @@
+/* slayer.css */
+
+body {
+    font-family: "Underdog", system-ui; /* Японский шрифт */
+    background-color: #1b1b1b; /* Тёмный фон */
+    color: #f5f5f5; /* Светлый текст для контраста */
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+
+header {
+    background-color: #104672; /* Темно-синий цвет */
+    font-family: "Stick", sans-serif;
+    background-position: bottom;
+    background-repeat: repeat;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Стили для навигации */
+.navigation {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #1b1b1b;
+}
+
+.navigation li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6947ff; /* Цвет при наведении */
+}
+
+
+h1 {
+    font-family: "Stick", sans-serif; /* Элегантный, шрифтовой заголовок */
+    font-size: 2.5em;
+    margin: 0;
+    color: #dde4f0; /* Красный цвет заголовка */
+    text-shadow: 2px 2px 5px #1b1b1b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    flex: 1;
+    margin: 0 1em;
+}
+
+.red-text {
+    color: rgb(0, 85, 255);
+}
+
+.flashback-text {
+    color:#591022;
+}
+
+.left-column h2 {
+    font-family: "Stick", sans-serif;
+    color: #395ce6; /* Красный цвет заголовка */
+    border-bottom: 2px solid #395ce6;
+    padding-bottom: 0.5em;
+}
+
+.left-column p {
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+.character-image {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 2px solid #395ce6;
+    border-radius: 10px;
+}
+
+/* Добавление традиционных японских узоров как фона для правой колонки */
+.right-column {
+    background: repeating-linear-gradient(
+        45deg,
+        #1c1c51,
+        #1c1c51, 10px,
+        #1b1b1b 10px,
+        #1b1b1b 20px
+    );
+    padding: 1em;
+    border-radius: 10px;
+}
+
+#music-popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+#music-popup.show {
+    opacity: 1;
+    visibility: visible;
+}

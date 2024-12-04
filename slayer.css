@@ -1,21 +1,56 @@
 /* slayer.css */
 
 body {
-    font-family: "Stick", sans-serif; /* Японский шрифт */
+    font-family: "Underdog", system-ui; /* Японский шрифт */
     background-color: #1b1b1b; /* Тёмный фон */
     color: #f5f5f5; /* Светлый текст для контраста */
     margin: 0;
     padding: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
+body.fade-out {
+    opacity: 0;
+}
+
+
 header {
-    background-image: url('https://i.pinimg.com/736x/ba/ce/c3/bacec31cd1daec6705a6fce3252c4855.jpg'); /* Темно-синий цвет */
+    background-color: #721018; /* Темно-синий цвет */
+    font-family: "Stick", sans-serif;
     background-position: bottom;
     background-repeat: repeat;
     color: white;
     text-align: center;
     padding: 1em 0;
 }
+
+/* Стили для навигации */
+.navigation {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #222;
+}
+
+.navigation li {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff6347; /* Цвет при наведении */
+}
+
 
 h1 {
     font-family: "Stick", sans-serif; /* Элегантный, шрифтовой заголовок */
@@ -42,6 +77,14 @@ h1 {
     margin: 0 1em;
 }
 
+.red-text {
+    color: red;
+}
+
+.flashback-text {
+    color:#591053;
+}
+
 .left-column h2 {
     font-family: "Stick", sans-serif;
     color: #e63946; /* Красный цвет заголовка */
@@ -65,8 +108,8 @@ h1 {
 .right-column {
     background: repeating-linear-gradient(
         45deg,
-        #1c3d51,
-        #1c3d51 10px,
+        #511c1c,
+        #511c1c 10px,
         #1b1b1b 10px,
         #1b1b1b 20px
     );
@@ -74,3 +117,23 @@ h1 {
     border-radius: 10px;
 }
 
+#music-popup {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+#music-popup.show {
+    opacity: 1;
+    visibility: visible;
+}
