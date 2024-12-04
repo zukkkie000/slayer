@@ -118,13 +118,6 @@ h1 {
     
 }
 
-@media (max-width: 768px) {
-    .right-column {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-}
 
 #music-popup {
     font-family: "Stick", sans-serif;
