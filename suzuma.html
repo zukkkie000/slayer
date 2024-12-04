@@ -124,7 +124,7 @@
 
 <!-- Всплывающее окно -->
 <div id="music-popup">
-    <p>Сейчас играет: "Название музыки"</p>
+    <p>Сейчас играет: "Coconuts - Silver Light"</p>
 </div>
 
 <script>
@@ -136,6 +136,20 @@
             setTimeout(() => {
                 window.location.href = href; // Перейти на другую страницу
             }, 500); // Ждать завершения анимации
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const music = document.getElementById('background-music');
+        const popup = document.getElementById('music-popup');
+
+        // Показать окно с названием музыки при начале воспроизведения
+        music.addEventListener('play', function () {
+            popup.classList.add('show');
+            setTimeout(() => {
+                popup.classList.remove('show');
+            }, 3000); // Убираем через 3 секунды
         });
     });
 </script>

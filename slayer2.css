@@ -118,11 +118,12 @@ h1 {
 }
 
 #music-popup {
+    font-family: "Stick", sans-serif;
     position: fixed;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(66, 102, 173, 0.8);
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
